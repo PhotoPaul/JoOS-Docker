@@ -1,0 +1,30 @@
+version: "3"
+
+volumes:
+  db_data: {}
+
+services:
+  db:
+    container_name: "joos_db"
+    image: mariadb
+    # restart: always
+    environment:
+      LANG: C.UTF-8
+      MYSQL_ROOT_PASSWORD: "root"
+      MYSQL_DATABASE: "joos"
+      MYSQL_USER: "joos"
+      MYSQL_PASSWORD: "joos"
+    networks:
+      - joos_net
+    ports:
+      - "33306:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./init-schema.sql:/docker-entrypoint-initdb.d/1.sql
+      - ./init-data.sql:/docker-entrypoint-initdb.d/2.sql
+    command: "--character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_520_ci"
+    mem_limit: 256MB
+
+networks:
+  joos_net:
+    name: joos_net
