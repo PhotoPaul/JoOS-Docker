@@ -1,6 +1,6 @@
 # JoOS Docker
 
-Run `git clone git@github.com:PhotoPaul/JoOS-Docker.git`
+Run `git clone https://github.com/PhotoPaul/JoOS-Docker.git`
 
 Run `cd JoOS-Docker`
 
