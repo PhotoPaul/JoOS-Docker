@@ -38,13 +38,13 @@ services:
     volumes:
       - ../joos-api:/var/www/html/joos-api
 
-  # joos:
-  #   container_name: "joos"
-  #   build: "images/joos"
-  #   networks:
-  #     - joos_net
-  #   ports:
-  #   - "4200:4200"
+  joos:
+    container_name: "joos"
+    build: "images/joos"
+    networks:
+      - joos_net
+    ports:
+    - "4200:4200"
 
 networks:
   joos_net:
