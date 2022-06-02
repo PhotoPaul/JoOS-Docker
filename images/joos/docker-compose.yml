@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  joos:
+    container_name: "joos"
+    build: .
+    networks:
+      - joos_net
+    ports:
+    - "4200:4200"
+
+networks:
+  joos_net:
+    external: true
+    name: joos_net
