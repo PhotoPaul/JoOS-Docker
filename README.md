@@ -28,3 +28,15 @@ http://localhost:4200/auth/reset?token=setPassword
 **Email:** `admin@change.me`
 
 **Password:** `Use the password you set during Initialization`
+
+### Uninstall:
+#### Linux:
+```
+docker compose -f JoOS-Docker/docker-compose.yml down -v
+rm -rf JoOS-Docker/
+```
+#### Windows:
+```
+docker compose -f JoOS-Docker/docker-compose.yml down -v
+rmdir /s /q JoOS-Docker
+```
