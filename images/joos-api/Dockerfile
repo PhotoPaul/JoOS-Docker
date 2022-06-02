@@ -13,8 +13,6 @@ RUN pecl install xdebug \
 
 WORKDIR /var/www/html
 
-# RUN git clone https://github.com/PhotoPaul/JoOS.git .
-
 COPY docker-php-ext-xdebug.ini /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
 
 EXPOSE 80

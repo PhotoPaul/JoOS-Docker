@@ -9,7 +9,7 @@ services:
     ports:
       - "4201:80"
     volumes:
-      - ../../../joos-api:/var/www/html/joos-api
+      - src:/var/www/html/joos-api
 networks:
   joos_net:
     external: true
