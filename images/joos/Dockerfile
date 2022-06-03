@@ -1,4 +1,4 @@
-FROM node:12-alpine
+FROM node:fermium-alpine
 
 RUN apk update && \
   apk add git
