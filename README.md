@@ -1,19 +1,10 @@
 # JoOS Docker
 
-### Basic Installation:
+### Installation:
+```
+git clone https://github.com/PhotoPaul/JoOS-Docker.git
+```
 
-#### Linux:
-```
-git clone https://github.com/PhotoPaul/JoOS-Docker.git
-git clone https://github.com/PhotoPaul/JoOS-API.git ./JoOS-Docker/images/joos-api/src
-cp JoOS-Docker/images/joos-api/src/settings.example.php JoOS-Docker/images/joos-api/src/settings.php
-```
-#### Windows:
-```
-git clone https://github.com/PhotoPaul/JoOS-Docker.git
-git clone https://github.com/PhotoPaul/JoOS-API.git ./JoOS-Docker/images/joos-api/src
-copy JoOS-Docker\images\joos-api\src\settings.example.php JoOS-Docker\images\joos-api\src\settings.php
-```
 ### Run:
 ```
 docker compose -f JoOS-Docker/docker-compose.yml up
@@ -33,10 +24,12 @@ http://localhost:4200/auth/reset?token=setPassword
 #### Linux:
 ```
 docker compose -f JoOS-Docker/docker-compose.yml down -v
+docker image rm joos-docker_api joos-docker_joos mariadb
 rm -rf JoOS-Docker/
 ```
 #### Windows:
 ```
 docker compose -f JoOS-Docker/docker-compose.yml down -v
+docker image rm joos-docker_api joos-docker_joos mariadb
 rmdir /s /q JoOS-Docker
 ```
