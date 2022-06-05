@@ -3,13 +3,11 @@ version: "3"
 services:
   api:
     container_name: "joos_api"
-    image: .
+    build: .
     networks:
       - joos_net
     ports:
       - "4201:80"
-    volumes:
-      - src:/var/www/html/joos-api
 networks:
   joos_net:
     external: true
