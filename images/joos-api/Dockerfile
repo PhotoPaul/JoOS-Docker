@@ -1,7 +1,7 @@
 FROM php:apache
 
 RUN apt update && \
-    apt -y install git libpng-dev libjpeg-dev libfreetype6-dev
+    apt -y install git libpng-dev libjpeg-dev libfreetype6-dev mariadb-client
 
 RUN docker-php-ext-install mysqli pdo pdo_mysql
 
