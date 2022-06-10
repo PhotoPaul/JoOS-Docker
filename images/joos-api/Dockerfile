@@ -16,5 +16,6 @@ COPY docker-php-ext-xdebug.ini /usr/local/etc/php/conf.d/docker-php-ext-xdebug.i
 WORKDIR /var/www/html
 
 RUN git clone https://github.com/PhotoPaul/JoOS-API.git ./joos-api
+RUN install -d -m 0755 -o www-data -g www-data /var/www/html/joos-api/files
 
 EXPOSE 80
