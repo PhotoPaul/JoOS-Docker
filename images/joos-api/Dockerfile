@@ -1,4 +1,5 @@
-FROM php:apache
+# FROM php:apache
+FROM php:8.1.11-apache
 
 RUN apt update && \
     apt -y install git libpng-dev libjpeg-dev libfreetype6-dev mariadb-client
