@@ -17,7 +17,7 @@ services:
     networks:
       - joos_net
     ports:
-      - "33306:3306"
+      - "3306:3306"
     volumes:
       - db_data:/var/lib/mysql
       - ./init-schema.sql:/docker-entrypoint-initdb.d/1.sql
