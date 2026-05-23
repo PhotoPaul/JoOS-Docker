@@ -1,5 +1,7 @@
 USE `joos`;
 
+INSERT INTO `admin_applications_document_types` (documentTypeId, title_en, title_gr, viewRoles) VALUES (10, 'Learning Difficulty Diagnosis', 'Διάγνωση Μαθησιακής Δυσκολίας', NULL);
+
 INSERT INTO `admin_users` (firstName, lastName, email, authentication_token) VALUES ("Admin","Admin","admin@change.me","setPassword");
 
 INSERT INTO `admin_user_roles` VALUES (1,1,NULL);
