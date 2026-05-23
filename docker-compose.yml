@@ -35,6 +35,8 @@ services:
       - "4201:80"
     extra_hosts:
       - "host.docker.internal:host-gateway"
+    volumes:
+      - ../joos-api:/var/www/html/joos-api
 
   joos:
     container_name: "joos"
@@ -43,6 +45,9 @@ services:
       - joos_net
     ports:
     - "4200:4200"
+    volumes:
+      - ../joos:/app
+      - /app/node_modules
 
 networks:
   joos_net:
