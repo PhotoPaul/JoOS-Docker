@@ -460,6 +460,8 @@ CREATE TABLE `admin_applications_personal` (
   `userId` int NOT NULL,
   `birthDate` date DEFAULT NULL,
   `birthPlace` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci,
+  `fatherName` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci,
+  `motherName` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci,
   `phone` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci,
   `occupation` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci,
   `greekCitizen` tinyint(1) DEFAULT NULL,
